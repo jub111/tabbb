@@ -11,59 +11,38 @@
 			height: 100%;
 		}
 
-		body{
-			font-family: 'Karla', 'Helvetica', sans-serif;
-			font-size: 18px;
-			text-align: center;
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-		}
-		main{
+		
+		header{
 			background-color: #EA4C89;
 			color: white;
 		}
 
-		h1{
+		header h1{
 			font-size: 64px;
 			padding: 110px 0 10px 0;
 		}
-		h2{
+		header h2{
 			font-family: "Inconsolata", "Helvetica", sans-serif;
 			font-size: 24px;
 			font-weight: 400;
 		}
-		h1, h2{margin: 0px;}
 
-		a.button{
-			display: inline-block;
-			padding: 10px 42px 16px 42px;
-			border-radius: 200px;
+		header a.button{
 			margin-top: 68px;
 			background-color: #ffffff;
 			color: #000000;
-			height: 18px;
-			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-			transition: 0.2s;
 		}
-		a.button:hover{
-			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-		}
-		a.button img{
+		header a.button img{
 			display: inline;
 			vertical-align: middle;
 			margin: 0 16px 1px 0;
 		}
-		a{
-			color: inherit;
-			text-decoration: none;
-			font-weight: 700;
-		}
 
-		.browser{
+		header .browser{
 			margin: 64px 26px 0px 26px;
 			overflow: hidden;
 		}
-		.browser img{
+		header .browser img{
 			display: block;
 			margin: 0px auto;
 			width: 100%;
@@ -72,12 +51,61 @@
 			box-shadow: 0 16px 26px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.26);
 			transition: 0.2s;
 		}
-		.browser img:hover{
+		header .browser img:hover{
 			box-shadow: 0 26px 42px rgba(0,0,0,0.50), 0 16px 16px rgba(0,0,0,0.5);
 		}
 
+		section#about{
+			max-width: 720px;
+			margin: 0px auto;
+			padding: 42px 16px;
+		}
+		#about h3{
+			font-weight: 400;
+			font-size: 24px;
+			padding: 26px 0px 16px 0px;
+		}
+		#about p{
+			padding: 10px 0;
+		}
+		#about a.button{
+			background-color: #EA4C89;
+			color: white;
+			margin: 42px 0 26px 0;
+		}
+
 		footer{
-			padding: 42px 0px;
+			padding: 16px 16px;
+		}
+
+		
+		body{
+			font-family: 'Karla', 'Helvetica', sans-serif;
+			font-size: 18px;
+			text-align: center;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		h1,h2,h3{margin: 0px;}
+		p{
+			margin: 0px;
+			line-height: 1.42;
+		}
+		a{
+			color: inherit;
+			text-decoration: none;
+			font-weight: 700;
+		}
+		a.button{
+			display: inline-block;
+			padding: 10px 42px 16px 42px;
+			height: 18px;
+			border-radius: 200px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+			transition: 0.2s;
+		}
+		a.button:hover{
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 		}
 	</style>
 	<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
@@ -85,16 +113,34 @@
 </head>
 <body>
 	<main>
-		<h1>tabbb</h1>
-		<h2>links on dribbble fixed</h2>
+		<header>
+			<h1>tabbb</h1>
+			<h2>fixing links on dribbble</h2>
 
-		<a class="button" href=""><img src="assets/arrow.png" alt=""><span>Try it out!</span></a>
+			<a class="button" href=""><img src="assets/arrow.png" alt=""><span>try it out!</span></a>
 
-		<div class="browser">
-			<a href="">
-				<img src="assets/chrome-extension.png" alt="">
-			</a>
-		</div>
+			<div class="browser">
+				<a href="">
+					<img src="assets/chrome-extension.png" alt="">
+				</a>
+			</div>
+		</header>
+		
+		<section id="about">
+			<h3>
+				<b>tabbbs</b> is a tiny chrome extension that makes browsing on dribbble more comfortable.
+			</h3>
+			<p>
+				Infinite scrolling can cause some hiccups when you navigate back and forth in your browser. By default, user profiles and links in shot descriptions are opened in the same tab on dribbble. If want to go back to the feed after opening such a link, you often don't end up at the previous scroll position.
+			</p>
+			<p>
+				With <b>tabbb</b> you can choose to open all user profiles and links in shot descriptions in a new tab by default, so that always get back to where you took off. 
+			</p>
+
+			<a class="button" href=""><span>download for free</span></a>	
+		</section>
+		
+
 	</main>
 	<footer>
 		Made with <span style="padding-right:3px;">💖</span> by <a href="http://jonasbrinkhoff.com">Jonas</a>
