@@ -1,0 +1,22 @@
+{
+	"name": "tabbb",
+	"version": "0.0.1",
+	"manifest_version": 2,
+	"icons": {
+		"16": "assets/logo-16x16.png",
+		"48": "assets/logo-48x48.png",
+		"128": "assets/logo-128x128.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["https://*.dribbble.com/*"],
+			"js": ["content.js"]
+		}
+	],
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"options_page": "options.html"
+}
