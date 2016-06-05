@@ -11,12 +11,16 @@
 	"content_scripts": [
 		{
 			"matches": ["https://*.dribbble.com/*"],
-			"js": ["content.js"]
+			"js": ["js/content.js"]
 		}
 	],
 	"permissions": [
 		"activeTab",
 		"storage"
 	],
-	"options_page": "options.html"
+	"options_page": "html/options.html",
+	"background": {
+			"scripts": ["js/background.js"],
+			"persistent": false
+	}
 }

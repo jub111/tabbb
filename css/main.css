@@ -1,0 +1,102 @@
+body{
+	margin: 0px;
+}
+header{
+	padding: 16px 42px;
+	background-color: #ea4c89;
+	color: white;
+}
+main{
+	padding: 16px 42px;
+}
+.form-row{
+	padding: 6px 0px;
+}
+#status{
+	font-family: "Inconsolata", "Helvetica", sans-serif;
+}
+
+footer{
+	position: absolute;
+	bottom: 26px;
+	left: 42px;
+	font-size: 14px;
+}
+
+#popup{
+	display: none;
+	position: relative;
+	z-index: 100;
+}
+#popup #overlay{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(255,255,255,0.85);
+}
+#popup .container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	width: 80%;
+	max-width: 740px;
+	text-align: center;
+}
+#popup .message{
+	position: relative;
+	padding: 26px;
+	color: white;
+	background-color: #EA4C89;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#popup .message .icon{padding: 26px 0 16px 0;}
+#popup .message h3{font-size: 48px;}
+#popup .message p{margin: 0; padding: 16px 0; font-size: 24px}
+#popup .message a.button{margin: 42px 0 16px 0;}
+@media (max-width: 600px) {
+	#popup .message h3{font-size: 34px;}
+	#popup .message p{font-size: 18px}
+}
+#popup .contact{padding: 26px 0;}
+
+
+/* Typography */
+body{
+	font-family: 'Karla', 'Helvetica', sans-serif;
+}
+body, button{
+	font-size: 18px;
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4{margin: 0;}
+h1{
+	font-size: 36px;
+}
+h2{
+	font-family: "Inconsolata", "Helvetica", sans-serif;
+	font-size: 24px;
+	padding: 16px 0 16px 0;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+	font-weight: 700;
+}
+a.button{
+	display: inline-block;
+	padding: 10px 42px 16px 42px;
+	height: 18px;
+	border-radius: 200px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: 0.2s;
+	cursor: pointer;
+}
+a.button.white{
+	background-color: #ffffff;
+	color: #000000;
+}
+a.button:hover{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

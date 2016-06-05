@@ -13,7 +13,7 @@ document.addEventListener("DOMSubtreeModified", function() {
 function addTargetToLinks() {
 	chrome.storage.sync.get({
 		'preferences' : {
-			'profiles' : true,
+			'profiles' : false,
 			'shotDescription': true,
 		}
 	}, function(options) {
