@@ -11,26 +11,29 @@ document.addEventListener("DOMSubtreeModified", function() {
 }, false);
 
 function addTargetToLinks() {
-	chrome.storage.sync.get({
-		'preferences' : {
-			'profiles' : false,
-			'shotDescription': true,
-		}
-	}, function(options) {
+	chrome.storage.sync.get('preferences', function(options) {
 		if (!chrome.runtime.error) {
-			// User Profiles
-			var profiles = document.getElementsByClassName('user')[0];
+			// User profiles
+			var user = document.getElementsByClassName('user')[0];
 			var comments = document.getElementsByClassName('comments')[0];
+			var attribution = document.getElementsByClassName('attribution');
 			var buy = document.getElementsByClassName('buy')[0];
-			if(options.preferences.profiles) {
-				if(profiles != null) {
-					setAttributeOfElements(profiles.querySelectorAll('a'), 'target', '_blank')
+			if(options.preferences.user == true) {
+				if(user != null) {
+					setAttributeOfElements(user.querySelectorAll('a'), 'target', '_blank')
 				}
 				if(comments != null) {
 					setAttributeOfElements(comments.querySelectorAll('a.url'), 'target', '_blank')
 				}
 				if(buy != null) {
 					setAttributeOfElements(buy.querySelectorAll('a'), 'target', '_blank')
+				}
+				if(attribution != null) {
+					for(var index in attribution) { 
+						if (attribution.hasOwnProperty(index)) {
+							setAttributeOfElements(attribution[index].querySelectorAll('a'), 'target', '_blank');
+						}
+					}
 				}
 			}
 
