@@ -18,6 +18,7 @@ function addTargetToLinks() {
 			var comments = document.getElementsByClassName('comments')[0];
 			var attribution = document.getElementsByClassName('attribution');
 			var buy = document.getElementsByClassName('buy')[0];
+			
 			if(options.preferences.user == true) {
 				if(user != null) {
 					setAttributeOfElements(user.querySelectorAll('a'), 'target', '_blank')

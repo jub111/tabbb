@@ -1,6 +1,6 @@
 {
 	"name": "tabbbs",
-	"version": "0.1",
+	"version": "0.1.2",
 	"manifest_version": 2,
 	"icons": {
 		"16": "assets/logo-16x16.png",
